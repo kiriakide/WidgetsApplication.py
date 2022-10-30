@@ -34,7 +34,7 @@ def lambda_handler(event, context):
     weather_data = weather_data.drop(weather_data.index[:6])
     csv_data = weather_data.to_csv(index=False)
 
-    #call your s3 bucket
+    #call your s3 bucke
     s3 = boto3.resource('s3')
     bucket = s3.Bucket('your_bucket_name_here')
     key = '{}.csv'.format(date)
