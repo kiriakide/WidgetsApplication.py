@@ -9,4 +9,11 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
+import arcgis
+from arcgis.gis import GIS
+# Create a GIS object, as an anonymous user for this example
+gis = GIS()
 
+map1 = gis.map('Paris') # Passing a place name to the constructor
+                        # will initialize the extent of the map.
+map1
