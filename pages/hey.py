@@ -11,3 +11,9 @@ name = data['Meta Data']['2. Symbol']
 open = data['Time Series (Daily)']['2022-10-28']['1. open']
 st.write(name)
 st.write(open)
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
