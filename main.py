@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 st.set_page_config(page_title="Health Coach", page_icon=":heart:", layout="wide" )
 
@@ -9,7 +8,6 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
-import arcgis
 from arcgis.gis import GIS
 # Create a GIS object, as an anonymous user for this example
 gis = GIS()
