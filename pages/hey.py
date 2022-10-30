@@ -6,6 +6,6 @@ r = requests.get(url)
 data = r.json()
 
 name = data['Meta Data']['2. Symbol']
-op = data['Time Series (Daily)']['2022-10-28']['1.open']
+open = data['Time Series (Daily)']['2022-10-28']['1. open']
 st.write(name)
-st.write(op)
+st.write(open)
