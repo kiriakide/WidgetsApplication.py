@@ -8,9 +8,4 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
-from arcgis.gis import GIS
-# Create a GIS object, as an anonymous user for this example
-gis = GIS()
-
-map1 = gis.map('Paris')
-print(map1)
+import yfinance

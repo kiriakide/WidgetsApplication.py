@@ -1,17 +1,15 @@
 import streamlit as st
 import pandas as pd
+import requests
 
-st.set_page_config(page_title="Health Coach", page_icon=":heart:", layout="wide" )
+url= 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo'
+r = requests.get(url)
+data = r.json()
 
-with st.container():
-    st.title ("HealaaathCoach :heart: :running:")
-    st.subheader("hey")
+name= data['Meta Data']['2. Symbol']
+open = data['Time Series (Daily)']['2022-10-28']['1. open']
+st.write(name)
+st.write(open)
 
-st.sidebar.success("select a page above")
 
-import urllib.request, json
-
-resp = urllib.request.urlopen('https://query2.finance.yahoo.com/v10/finance/quoteSummary/tsla?modules=price')
-data = json.loads(resp.read())
-price = data['quoteSummary']['result'][0]['price']['regularMarketPrice']['raw']
-st.print(price)
+st.write("simple stock price")
